@@ -39,7 +39,7 @@
 // src/LiveMap.js
 import React, { useState, useEffect, useRef } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import logo from '../logo.svg';
+import bike from '../bike.jpg';
 
 const containerStyle = {
   width: '100%',
@@ -70,7 +70,7 @@ const LiveMap = () => {
         (error) => {
           console.error(error);
         },
-        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+        { enableHighAccuracy: true, timeout: 1000, maximumAge: 0 }
       );
 
       return () => {
@@ -91,7 +91,7 @@ const LiveMap = () => {
       >
         <Marker
           position={location}
-          icon="https://maps.google.com/mapfiles/ms/icons/blue-dot.png" // Custom marker icon
+          icon={bike} // Custom marker icon
         />
       </GoogleMap>
     </LoadScript>
