@@ -91,7 +91,7 @@ const LiveMap = () => {
       >
         <Marker
           position={location}
-          icon={logo} // Custom marker icon
+          icon="https://maps.google.com/mapfiles/ms/icons/blue-dot.png" // Custom marker icon
         />
       </GoogleMap>
     </LoadScript>
